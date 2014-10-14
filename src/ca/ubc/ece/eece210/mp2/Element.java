@@ -1,5 +1,6 @@
 package ca.ubc.ece.eece210.mp2;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -18,9 +19,16 @@ public abstract class Element {
 	 * 
 	 * @return the children
 	 */
-	public List<Element> getChildren() {
-		// TODO implement this
-		return null;
+	public List<Element> getChildren(Element element) {
+
+	    List<Element> children = new LinkedList<Element>();
+		
+		
+		
+		
+	    
+	    
+		return null ;
 	}
 
 	/**
@@ -33,6 +41,8 @@ public abstract class Element {
 	protected void addChild(Element b) {
 		// TODO implement this (should throw an exception if trying to add
 		// to a leaf object);
+	    
+	    
 	}
 
 	/**

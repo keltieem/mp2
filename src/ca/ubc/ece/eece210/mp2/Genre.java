@@ -15,7 +15,8 @@ public final class Genre extends Element {
 	 *            the name of the genre.
 	 */
 	public Genre(String name) {
-		// TODO implement
+	
+	    Genre newGenre = new Genre(name);
 	}
 
 	/**
@@ -24,7 +25,9 @@ public final class Genre extends Element {
 	 * @param stringRepresentation
 	 */
 	public static Genre restoreCollection(String stringRepresentation) {
-		// TODO implement
+		
+	    
+	    
 		return null;
 	}
 

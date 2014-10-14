@@ -24,7 +24,7 @@ public final class Catalogue {
 	 *            the file from where to restore the library.
 	 */
 	public Catalogue(String fileName) {
-		// TODO implement
+		
 	}
 
 	/**

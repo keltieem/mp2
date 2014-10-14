@@ -23,7 +23,9 @@ public final class Album extends Element {
 	 * 			  the list of songs in the album
 	 */
 	public Album(String title, String performer, ArrayList<String> songlist) {
-		// TODO implement this
+		
+	    Album newAlbum = new Album(title, performer, songlist);
+		
 	}
 
 	/**
@@ -34,7 +36,7 @@ public final class Album extends Element {
 	 *            the string representation
 	 */
 	public Album(String stringRepresentation) {
-		// TODO implement this
+	    dfs
 	}
 
 	/**
@@ -75,7 +77,10 @@ public final class Album extends Element {
 	 * @return the title
 	 */
 	public String getTitle() {
-		// TODO implement this
+	    String title = new String();
+	    
+	    kjh
+	    
 		return null;
 	}
 
