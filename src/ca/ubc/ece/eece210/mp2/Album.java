@@ -24,7 +24,10 @@ public final class Album extends Element {
 	 */
 	public Album(String title, String performer, ArrayList<String> songlist) {
 		
-	    Album newAlbum = new Album(title, performer, songlist);
+	       ArrayList<String> newAlbum = new ArrayList<String>();
+	        newAlbum.add(title);
+	        newAlbum.add(performer);
+	        newAlbum.addAll(songlist);
 		
 	}
 
@@ -36,7 +39,9 @@ public final class Album extends Element {
 	 *            the string representation
 	 */
 	public Album(String stringRepresentation) {
-	    dfs
+	       
+	    String[] splitArray = stringRepresentation.split(" ");
+
 	}
 
 	/**
@@ -44,11 +49,16 @@ public final class Album extends Element {
 	 * contains the title, performer and songlist, as well as all the genre
 	 * that the book belongs to.
 	 * 
-	 * @return the string representation
+	 * @return albumString: the string representation
 	 */
-	public String toString() {
-		// TODO implement this
-		return "";
+	public String toString(ArrayList<String> newAlbum) {
+        String albumString = new String();  
+        
+        for(int index=0; index < newAlbum.size(); index++){
+           albumString += newAlbum.get(index) + " ";
+        }
+        
+        return albumString;
 	}
 
 	/**
@@ -58,7 +68,7 @@ public final class Album extends Element {
 	 *            the genre to add the album to.
 	 */
 	public void addToGenre(Genre genre) {
-		// TODO implement this
+		super.addChild(genre);
 	}
 
 	/**
@@ -68,30 +78,34 @@ public final class Album extends Element {
 	 */
 	public Genre getGenre() {
 		// TODO implement this
+	    //
 		return null;
 	}
 
 	/**
 	 * Returns the title of the album
 	 * 
-	 * @return the title
+	 * @return title: the title
 	 */
-	public String getTitle() {
+	public String getTitle(ArrayList<String> newAlbum) {
 	    String title = new String();
 	    
-	    kjh
+	    title = newAlbum.get(0);
 	    
-		return null;
+		return title;
 	}
 
 	/**
 	 * Returns the performer of the album
 	 * 
-	 * @return the performer
+	 * @return performer: the performer
 	 */
-	public String getPerformer() {
-		// TODO implement this
-		return null;
+	public String getPerformer(ArrayList<String> newAlbum) {
+	    String performer = new String();
+	    
+	    performer = newAlbum.get(1);
+	    
+		return performer;
 	}
 
 	/**

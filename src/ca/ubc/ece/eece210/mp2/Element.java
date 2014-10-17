@@ -1,5 +1,6 @@
 package ca.ubc.ece.eece210.mp2;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -19,9 +20,11 @@ public abstract class Element {
 	 * 
 	 * @return the children
 	 */
-	public List<Element> getChildren(Element element) {
+	public ArrayList<Element> getChildren(Element element) {
 
-	    List<Element> children = new LinkedList<Element>();
+	    ArrayList<Element> children = new ArrayList<Element>();
+	    
+	    
 		
 		
 		
