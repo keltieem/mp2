@@ -1,10 +1,6 @@
 package ca.ubc.ece.eece210.mp2;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-
-import com.sun.corba.se.spi.orbutil.fsm.Input;
-import com.sun.xml.internal.ws.util.StringUtils;
 
 /**
  * Represents a genre (or collection of albums/genres).
@@ -49,7 +45,7 @@ public final class Genre extends Element {
 	public String toString(ArrayList<String> newGenre) {
 		String genreString = new String();	
 		
-		for(int index=0; index < newGenre.size(); index++){
+		for(int index=1; index < newGenre.size(); index++){
 	       genreString += newGenre.get(index) + " ";
 		}
 	    
@@ -62,8 +58,8 @@ public final class Genre extends Element {
 	 * @param b
 	 *            the element to be added to the collection.
 	 */
-	public void addToGenre(Element b) {
-		super.addChild(b);
+	public void addToGenre(int key, String name) {
+		super.addChild(key, name);
 	}
 
 	/**

@@ -67,19 +67,31 @@ public final class Album extends Element {
 	 * @param genre
 	 *            the genre to add the album to.
 	 */
-	public void addToGenre(Genre genre) {
-		super.addChild(genre);
+	public void addToGenre(int key, String name) {
+		super.addChild(key, name);
 	}
 
+	
+	/**
+	 * Finds child in genre and rewrites it as a null node
+	 * 
+	 * @param key: the child to remove
+	 */
+	public void removeFromGenre(int key){
+	    super.removeChild(key);
+	}
+	
 	/**
 	 * Returns the genre that this album belongs to.
 	 * 
 	 * @return the genre that this album belongs to
 	 */
-	public Genre getGenre() {
-		// TODO implement this
-	    //
-		return null;
+	public Node getGenre(int key) {
+	    
+	    int keyOfGenre = key - 1;
+	    Node foundGenre = super.findNode(keyOfGenre);
+	    
+		return foundGenre;
 	}
 
 	/**
