@@ -16,11 +16,11 @@ public final class Catalogue {
 	 * Builds a new, empty catalogue.
 	 */
 	public Catalogue() {
-		File catalogue = new File("catalogue.txt");
+		File catalogue = new File("catalogue.txt"); // does not create new file on disk
 		try {
             Scanner input = new Scanner(catalogue);
         } catch (FileNotFoundException e) {
-            System.out.println("File does not exist!");
+            System.out.println("File does not exist!"); //check that file (ln 19) exists
         }
 		
 	}
@@ -53,8 +53,8 @@ public final class Catalogue {
 	 */
 	
 	public void assignKeys(int genreNumber) throws FileNotFoundException{
-        int numberOfGenres = 0;
-        int numberOfAlbums = 0;
+        int numberOfGenres = 0; //keeps track of how many genres are in the file
+        int numberOfAlbums = 0; //keeps track of how many albums are in the file
         int keyOfLine = genreNumber;
         int keyOfGenre;
         int keyOfAlbum;

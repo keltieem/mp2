@@ -1,6 +1,7 @@
 package ca.ubc.ece.eece210.mp2;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Represents a genre (or collection of albums/genres).
@@ -9,7 +10,8 @@ import java.util.ArrayList;
  * 
  */
 public final class Genre extends Element {
-
+    String newGenreName;
+    
 	/**
 	 * Creates a new genre with the given name.
 	 * 
@@ -18,8 +20,7 @@ public final class Genre extends Element {
 	 */
 	public Genre(String name) {
 	
-	    ArrayList<String> newGenre = new ArrayList<String>();
-	    newGenre.add(name);
+	    newGenreName = name;
 	    
 	    
 	}
@@ -29,12 +30,11 @@ public final class Genre extends Element {
 	 * 
 	 * @param stringRepresentation
 	 */
-	public static Genre restoreCollection(String stringRepresentation) {
+	public static String restoreCollection(String stringRepresentation) {
 		
-	    String[] splitArray = stringRepresentation.split(" ");
+	    String[] splitArray = stringRepresentation.split("<\then>");
 	    
-	    
-		return null;
+		return splitArray[0];
 	}
 
 	/**
@@ -42,11 +42,16 @@ public final class Genre extends Element {
 	 * 
 	 * @return genreString: the string representation of a genre
 	 */
-	public String toString(ArrayList<String> newGenre) {
-		String genreString = new String();	
+	public String toString() {
+		String genreString = new String();
+		ArrayList<Element> newGenre = new ArrayList<Element>();
+		
+		newGenre = getChildren(parent);
+		
+		genreString = newGenreName + "<\then>";
 		
 		for(int index=1; index < newGenre.size(); index++){
-	       genreString += newGenre.get(index) + " ";
+	       genreString += newGenre.get(index) + "<\then>";
 		}
 	    
 		return genreString;
@@ -56,10 +61,10 @@ public final class Genre extends Element {
 	 * Adds the given album or genre to this genre
 	 * 
 	 * @param b
-	 *            the element to be added to the collection.
+	 *          the element to be added to the collection.
 	 */
-	public void addToGenre(int key, String name) {
-		super.addChild(key, name);
+	public void addToGenre(Element b) {
+		addChild(b);
 	}
 
 	/**

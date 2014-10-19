@@ -12,6 +12,11 @@ import java.util.ArrayList;
  */
 
 public final class Album extends Element {
+    String title;
+    String performer;
+    ArrayList<String> songlist = new ArrayList<String>();
+    
+    
 	/**
 	 * Builds an album with the given title, performer and song list
 	 * 
@@ -39,8 +44,8 @@ public final class Album extends Element {
 	 *            the string representation
 	 */
 	public Album(String stringRepresentation) {
-	       
-	    String[] splitArray = stringRepresentation.split(" ");
+
+	    String[] splitArray = stringRepresentation.split("<\then>");
 
 	}
 
@@ -55,7 +60,7 @@ public final class Album extends Element {
         String albumString = new String();  
         
         for(int index=0; index < newAlbum.size(); index++){
-           albumString += newAlbum.get(index) + " ";
+           albumString += newAlbum.get(index) + "<\then>";
         }
         
         return albumString;
@@ -67,18 +72,18 @@ public final class Album extends Element {
 	 * @param genre
 	 *            the genre to add the album to.
 	 */
-	public void addToGenre(int key, String name) {
-		super.addChild(key, name);
+	public void addToGenre(Genre genre) {
+		addChild(genre);
 	}
 
 	
 	/**
 	 * Finds child in genre and rewrites it as a null node
 	 * 
-	 * @param key: the child to remove
+	 * @param b the child to remove
 	 */
-	public void removeFromGenre(int key){
-	    super.removeChild(key);
+	public void removeFromGenre(Element b){
+	    removeChild(b);
 	}
 	
 	/**
@@ -86,12 +91,9 @@ public final class Album extends Element {
 	 * 
 	 * @return the genre that this album belongs to
 	 */
-	public Node getGenre(int key) {
-	    
-	    int keyOfGenre = key - 1;
-	    Node foundGenre = super.findNode(keyOfGenre);
-	    
-		return foundGenre;
+	public Genre getGenre() {
+	    return (Genre) parent;
+	   
 	}
 
 	/**
