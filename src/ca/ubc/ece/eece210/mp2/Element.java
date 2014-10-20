@@ -1,7 +1,6 @@
 package ca.ubc.ece.eece210.mp2;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 /**
  * An abstract class to represent an entity in the catalogue. The element (in
@@ -13,8 +12,8 @@ import java.util.LinkedList;
 public abstract class Element {
     
     Element parent;
-    LinkedList<Element> genres = new LinkedList<Element>();
-    LinkedList<Element> albums = new LinkedList<Element>();
+    ArrayList<Element> genres = new ArrayList<Element>();
+    ArrayList<Element> albums = new ArrayList<Element>();
     
 
 	/**
@@ -51,7 +50,7 @@ public abstract class Element {
 	        if(b instanceof Genre){
 	           genres.add(b); 
 	        }
-	        else if(b instanceof Album){
+	        if(b instanceof Album){
 	            albums.add(b);
 	        }	        	        
 	    }    	    
