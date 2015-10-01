@@ -4,6 +4,12 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ * 
+ * @author Keltie Murdoch, Emmanuel Ioannides
+ * 
+ */
+
 public class GenreTest {
 
     @Test
