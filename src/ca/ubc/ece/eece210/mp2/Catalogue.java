@@ -11,7 +11,7 @@ import java.util.Scanner;
  * Container class for all the albums and genres. Its main responsibility is to
  * save and restore the collection from a file.
  * 
- * @author Sathish Gopalakrishnan
+ * @author Sathish Gopalakrishnan, Keltie Murdoch, Emmanuel Ioannides
  * 
  */
 public final class Catalogue {
