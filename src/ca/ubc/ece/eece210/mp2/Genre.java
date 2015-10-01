@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Represents a genre (or collection of albums/genres).
  * 
- * @author Sathish Gopalakrishnan
+ * @author Sathish Gopalakrishnan, Keltie Murdoch, Emmanuel Ioannides
  * 
  */
 public final class Genre extends Element {
