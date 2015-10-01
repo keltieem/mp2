@@ -1,3 +1,5 @@
+**This project was part of a class assignment in October 2014. Its skeleton code is authored by the Professor, Sathish Gopalakrishnan. Further code and functionality was then added by Keltie Murdoch and Emmanuel Ioannides. Below is the description of the assignment in full.**
+
 Machine Problem 2: Music Catalogue 2.10
 ===
 
