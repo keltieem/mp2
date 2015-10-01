@@ -6,6 +6,12 @@ import org.junit.Test;
 
 import ca.ubc.ece.eece210.mp2.Element.Node;
 
+/**
+ * 
+ * @author Keltie Murdoch, Emmanuel Ioannides
+ * 
+ */
+
 public class ElementTest {
 
     @Test
