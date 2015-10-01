@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * 
- * @author Sathish Gopalakrishnan
+ * @author Sathish Gopalakrishnan, Keltie Murdoch, Emmanuel Ioannides
  * 
  *         This class contains the information needed to represent an album in
  *         our application.
