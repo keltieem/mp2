@@ -1,5 +1,11 @@
 package ca.ubc.ece.eece210.mp2;
 
+/**
+ * 
+ * @author Keltie Murdoch, Emmanuel Ioannides
+ * 
+ */
+
 public class StringTreeNode {
     public String rootGenre;
     public StringTreeNode left;
