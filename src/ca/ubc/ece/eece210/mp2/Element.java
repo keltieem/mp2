@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * An abstract class to represent an entity in the catalogue. The element (in
  * this implementation) can either be an album or a genre.
  * 
- * @author Sathish Gopalakrishnan
+ * @author Sathish Gopalakrishnan, Keltie Murdoch, Emmanuel Ioannides
  * 
  */
 public abstract class Element {
